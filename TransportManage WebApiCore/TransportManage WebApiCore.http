@@ -1,0 +1,6 @@
+@TransportManage_WebApiCore_HostAddress = http://localhost:5139
+
+GET {{TransportManage_WebApiCore_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
