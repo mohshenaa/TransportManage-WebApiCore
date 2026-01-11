@@ -113,10 +113,10 @@ Response:
 }
 
 🚌 Trip APIs
-Get All Trips
+Get All Trips->
 GET /api/trips
 
-Create Trip
+Create Trip->
 POST /api/trips
 
 {
@@ -124,14 +124,14 @@ POST /api/trips
   "departureTime": "2026-02-01T10:00:00"
 }
 
-Update Trip
+Update Trip->
 PUT /api/trips/{id}
 
-Delete Trip
+Delete Trip->
 DELETE /api/trips/{id}
 
-👥 Passenger APIs (Master-Detail)
-Add Passengers to Trip
+👥 Passenger APIs (Master-Detail)->
+Add Passengers to Trip->
 POST /api/trips/{tripId}/passengers
 
 [
@@ -139,7 +139,7 @@ POST /api/trips/{tripId}/passengers
   { "name": "Karim", "seatNo": 6 }
 ]
 
-Get Passengers of Trip
+Get Passengers of Trip->
 GET /api/trips/{tripId}/passengers
 
 🧠 Master-Detail Concept
