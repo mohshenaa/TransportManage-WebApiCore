@@ -4,10 +4,12 @@ A full-featured Transport Management System Web API built with ASP.NET Core, imp
 
 Designed for scalable transport operations where each Trip can manage multiple Passengers with complete CRUD functionality.
 
+
 🔗 Client Applications
 Angular: https://github.com/mohshenaa/TransportManageSys_Angular-pro-9
 
 React: https://github.com/mohshenaa/transport_management_react
+
 
 🧱 System Architecture
 Client Apps (Angular / React)
@@ -20,6 +22,7 @@ Entity Framework Core
         │
         ▼
 SQL Server Database
+
 
 🧩 Key Features
 
@@ -39,6 +42,7 @@ EF Core Migrations
 
 Production-ready architecture
 
+
 📂 Project Structure
 TransportManage-WebApiCore
 │
@@ -51,6 +55,7 @@ TransportManage-WebApiCore
 ├── appsettings.json
 └── README.md
 
+
 🛠 Setup & Installation
 1️⃣ Requirements
 
@@ -60,6 +65,7 @@ SQL Server
 
 Visual Studio 2022/2026 / VS Code
 
+
 2️⃣ Configure Database
 
 Edit appsettings.json
@@ -68,8 +74,10 @@ Edit appsettings.json
   "DefaultConnection": "Server=YOUR_SERVER;Database=TransportManageDB;Trusted_Connection=True;"
 }
 
+
 3️⃣ Apply Migrations
 Update-Database
+
 
 4️⃣ Run Project
 dotnet run
@@ -78,6 +86,7 @@ dotnet run
 Swagger UI:
 
 https://localhost:5001/swagger
+
 
 🔐 Authentication Workflow
 
@@ -88,6 +97,7 @@ Login → Receive JWT Token
 Authorize in Swagger
 
 Access secured endpoints
+
 
 🧪 API Documentation
 🧑 Authentication
@@ -102,6 +112,7 @@ Request:
   "password": "Admin@123"
 }
 
+
 Login
 POST /api/auth/login
 
@@ -112,9 +123,11 @@ Response:
   "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
 }
 
+
 🚌 Trip APIs
 Get All Trips->
 GET /api/trips
+
 
 Create Trip->
 POST /api/trips
@@ -124,11 +137,14 @@ POST /api/trips
   "departureTime": "2026-02-01T10:00:00"
 }
 
+
 Update Trip->
 PUT /api/trips/{id}
 
+
 Delete Trip->
 DELETE /api/trips/{id}
+
 
 👥 Passenger APIs (Master-Detail)->
 Add Passengers to Trip->
@@ -139,8 +155,10 @@ POST /api/trips/{tripId}/passengers
   { "name": "Karim", "seatNo": 6 }
 ]
 
+
 Get Passengers of Trip->
 GET /api/trips/{tripId}/passengers
+
 
 🧠 Master-Detail Concept
 
@@ -156,6 +174,7 @@ Login & obtain JWT
 Use Swagger for testing
 
 Connect Angular / React frontend
+
 
 📦 Tech Stack
 Layer	Technology
