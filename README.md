@@ -4,12 +4,13 @@ A full-featured Transport Management System Web API built with ASP.NET Core, imp
 
 Designed for scalable transport operations where each Trip can manage multiple Passengers with complete CRUD functionality.
 
-
 🔗 Client Applications
-Angular: https://github.com/mohshenaa/TransportManageSys_Angular-pro-9
 
-React: https://github.com/mohshenaa/transport_management_react
+Angular Frontend
+https://github.com/mohshenaa/TransportManageSys_Angular-pro-9
 
+React Frontend
+https://github.com/mohshenaa/transport_management_react
 
 🧱 System Architecture
 Client Apps (Angular / React)
@@ -22,7 +23,6 @@ Entity Framework Core
         │
         ▼
 SQL Server Database
-
 
 🧩 Key Features
 
@@ -42,7 +42,6 @@ EF Core Migrations
 
 Production-ready architecture
 
-
 📂 Project Structure
 TransportManage-WebApiCore
 │
@@ -55,7 +54,6 @@ TransportManage-WebApiCore
 ├── appsettings.json
 └── README.md
 
-
 🛠 Setup & Installation
 1️⃣ Requirements
 
@@ -63,8 +61,7 @@ TransportManage-WebApiCore
 
 SQL Server
 
-Visual Studio 2022/2026 / VS Code
-
+Visual Studio 2022 / 2026 or VS Code
 
 2️⃣ Configure Database
 
@@ -74,10 +71,8 @@ Edit appsettings.json
   "DefaultConnection": "Server=YOUR_SERVER;Database=TransportManageDB;Trusted_Connection=True;"
 }
 
-
 3️⃣ Apply Migrations
 Update-Database
-
 
 4️⃣ Run Project
 dotnet run
@@ -86,7 +81,6 @@ dotnet run
 Swagger UI:
 
 https://localhost:5001/swagger
-
 
 🔐 Authentication Workflow
 
@@ -98,89 +92,49 @@ Authorize in Swagger
 
 Access secured endpoints
 
-
 🧪 API Documentation
 🧑 Authentication
 Register
 POST /api/auth/register
-
-
-Request:
 
 {
   "username": "admin",
   "password": "Admin@123"
 }
 
-
 Login
 POST /api/auth/login
-
-
-Response:
 
 {
   "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
 }
 
-
 🚌 Trip APIs
-Get All Trips->
-GET /api/trips
+Action	Endpoint
+Get All Trips	GET /api/trips
+Create Trip	POST /api/trips
+Update Trip	PUT /api/trips/{id}
+Delete Trip	DELETE /api/trips/{id}
 
-
-Create Trip->
-POST /api/trips
+Create Trip Example
 
 {
   "route": "Dhaka → Chittagong",
   "departureTime": "2026-02-01T10:00:00"
 }
 
-
-Update Trip->
-PUT /api/trips/{id}
-
-
-Delete Trip->
-DELETE /api/trips/{id}
-
-
-👥 Passenger APIs (Master-Detail)->
-Add Passengers to Trip->
-POST /api/trips/{tripId}/passengers
-
+👥 Passenger APIs (Master-Detail)
+Action	Endpoint
+Add Passengers	POST /api/trips/{tripId}/passengers
+Get Passengers	GET /api/trips/{tripId}/passengers
 [
   { "name": "Rahim", "seatNo": 5 },
   { "name": "Karim", "seatNo": 6 }
 ]
 
-
-Get Passengers of Trip->
-GET /api/trips/{tripId}/passengers
-
-
 🧠 Master-Detail Concept
 
-Each Trip can have multiple Passengers.
-The API allows bulk insert/update of passengers in one transaction — ensuring consistency and high performance.
+Each Trip can contain multiple Passengers.
+The API supports bulk insert/update operations in a single transaction, ensuring data integrity and high performance.
 
-🧪 Recommended Development Flow
-
-Register admin user
-
-Login & obtain JWT
-
-Use Swagger for testing
-
-Connect Angular / React frontend
-
-
-📦 Tech Stack
-Layer	Technology
-Backend	ASP.NET Core
-ORM	Entity Framework Core
-DB	SQL Server
-Auth	JWT
-Frontend	Angular, React
-Docs	Swagger
+🛜For visualize connect Angular or react
